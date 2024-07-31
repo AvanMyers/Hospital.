@@ -18,12 +18,12 @@ namespace Hospital
 
             Console.WriteLine("Введите количество человек в очереди");
             piopleInHospital = Convert.ToInt32(Console.ReadLine());
-            hoursBeforeAppointment = (piopleInHospital * timePerPersone) / minutesInHour;
-            minutesBeforAppointment = (piopleInHospital * timePerPersone) % minutesInHour;
+            int allPersonesTime = piopleInHospital * timePerPersone;
+            hoursBeforeAppointment = allPersonesTime / minutesInHour;
+            minutesBeforAppointment = allPersonesTime % minutesInHour;
 
             Console.WriteLine($"Вам осталось подождать {hoursBeforeAppointment} часов и {minutesBeforAppointment} минут");
             Console.ReadKey();
-
         }
     }
 }
